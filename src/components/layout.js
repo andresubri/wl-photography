@@ -74,9 +74,7 @@ const Layout = props => {
                 RSS
               </Link>
               <a
-                href="https://github.com/jooplaan/gatsby-london-night-and-day"
                 title="GitHub"
-                target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => open()}
               >
