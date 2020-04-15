@@ -9,10 +9,8 @@ const Layout = props => {
   const handleClick = e => {
     e.preventDefault();
     console.log("testing");
-    init({
-      APIUrl: "https://frosty-shockley-f702ee.netlify.com/.netlify/identity"
-    });
-    open("login");
+    init();
+    open();
   };
 
   return (
