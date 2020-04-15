@@ -84,7 +84,7 @@ const Layout = props => {
                 RSS
               </Link>
               <a title="Login" href={`#login`} onClick={handleClick}>
-                GitHub
+                Login
               </a>
             </div>
           </div>
