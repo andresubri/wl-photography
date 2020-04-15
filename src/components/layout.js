@@ -75,6 +75,7 @@ const Layout = props => {
               </Link>
               <a
                 title="GitHub"
+                href={`#login`}
                 rel="noopener noreferrer"
                 onClick={() => open()}
               >
