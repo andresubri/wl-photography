@@ -1,7 +1,7 @@
 module.exports = {
-  name: 'WL Fotografía',
+  name: 'Waldys Lantigua Fotografia',
   shortName: '',
-  description: 'Hola Mundo',
+  description: 'Buenas Noches',
   url: 'https://www.jooplaan.com', // Domain of your site without prefix!
   prefix: '/',
   author: 'jooplaan',
