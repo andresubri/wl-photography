@@ -1,5 +1,5 @@
 import React from "react";
-import { open } from "netlify-identity-widget";
+import { init, open } from "netlify-identity-widget";
 import { Link } from "gatsby";
 
 const Layout = props => {
@@ -8,7 +8,11 @@ const Layout = props => {
 
   const handleClick = e => {
     e.preventDefault();
-    open();
+    console.log("testing");
+    init({
+      APIUrl: "https://frosty-shockley-f702ee.netlify.com/.netlify/identity"
+    });
+    open("login");
   };
 
   return (
@@ -79,12 +83,7 @@ const Layout = props => {
               >
                 RSS
               </Link>
-              <a
-                title="GitHub"
-                className="button"
-                href={`#login`}
-                onClick={handleClick}
-              >
+              <a title="Login" href={`#login`} onClick={handleClick}>
                 GitHub
               </a>
             </div>
