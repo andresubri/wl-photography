@@ -5,6 +5,12 @@ import { Link } from "gatsby";
 const Layout = props => {
   const { title, children } = props;
   const [toggleNav, setToggleNav] = React.useState(false);
+
+  const handleClick = e => {
+    e.preventDefault();
+    open();
+  };
+
   return (
     <div className={`site-wrapper ${toggleNav ? `site-head-open` : ``}`}>
       <header className="site-head">
@@ -77,7 +83,7 @@ const Layout = props => {
                 title="GitHub"
                 className="button"
                 href={`#login`}
-                onClick={() => open()}
+                onClick={handleClick}
               >
                 GitHub
               </a>
