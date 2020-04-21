@@ -7,6 +7,7 @@ import SEO from "../components/seo";
 
 class BlogPostTemplate extends React.Component {
   render() {
+    console.log(this.props);
     const post = this.props.post
       ? this.props.post
       : this.props.data.markdownRemark;

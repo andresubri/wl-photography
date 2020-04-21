@@ -9,12 +9,14 @@ const BlogPostPreview = props => {
   const tags = entry.getIn(["data", "tags"]);
 
   const post = {
-    title: entry.getIn(["data", "title"]),
-    description: entry.getIn(["data", "description"]),
-    date: entry.getIn(["data", "date"]),
-    tags: tags && tags.toJS(),
-    thumbnail: entry.getIn(["data", "featuredimage"]),
-    html: widgetFor("body")
+    frontmatter: {
+      title: entry.getIn(["data", "title"]),
+      description: entry.getIn(["data", "description"]),
+      date: entry.getIn(["data", "date"]),
+      tags: tags && tags.toJS(),
+      thumbnail: entry.getIn(["data", "featuredimage"]),
+      html: widgetFor("body")
+    }
   };
 
   return <BlogPostTemplate post={post} />;

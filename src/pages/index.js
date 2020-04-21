@@ -1,18 +1,19 @@
-import React from "react"
-import { graphql, StaticQuery } from "gatsby"
+import React from "react";
+import { graphql, StaticQuery } from "gatsby";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 // import Bio from "../components/bio"
-import PostCard from "../components/postCard"
+import PostCard from "../components/postCard";
 
-import "../style/normalize.css"
-import "../style/all.scss"
+import "../style/normalize.css";
+import "../style/all.scss";
+
 //TODO: switch to staticQuery, get rid of comments, remove unnecessary components, export as draft template
 const BlogIndex = ({ data }, location) => {
-  const siteTitle = data.site.siteMetadata.title
-  const posts = data.allMarkdownRemark.edges
-  let postCounter = 0
+  const siteTitle = data.site.siteMetadata.title;
+  const posts = data.allMarkdownRemark.edges;
+  let postCounter = 0;
 
   return (
     <Layout title={siteTitle}>
@@ -30,7 +31,7 @@ const BlogIndex = ({ data }, location) => {
       )}
       <div className="post-feed">
         {posts.map(({ node }) => {
-          postCounter++
+          postCounter++;
           return (
             <PostCard
               key={node.fields.slug}
@@ -38,12 +39,12 @@ const BlogIndex = ({ data }, location) => {
               node={node}
               postClass={`post`}
             />
-          )
+          );
         })}
       </div>
     </Layout>
-  )
-}
+  );
+};
 
 const indexQuery = graphql`
   query {
@@ -77,7 +78,7 @@ const indexQuery = graphql`
       }
     }
   }
-`
+`;
 
 export default props => (
   <StaticQuery
@@ -86,4 +87,4 @@ export default props => (
       <BlogIndex location={props.location} props data={data} {...props} />
     )}
   />
-)
+);
