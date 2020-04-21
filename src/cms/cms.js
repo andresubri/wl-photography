@@ -4,6 +4,7 @@ import CMS from "netlify-cms-app";
 
 // import AboutPagePreview from './preview-templates/AboutPagePreview'
 import BlogPostPreview from "./preview-templates/BlogPostPreview";
+import styles from "!css-loader!sass-loader!../style/all.scss";
 // import IndexPagePreview from './preview-templates/IndexPagePreview'
 
 // CMS.registerMediaLibrary(uploadcare)
@@ -12,5 +13,7 @@ import BlogPostPreview from "./preview-templates/BlogPostPreview";
 // CMS.registerPreviewTemplate('index', IndexPagePreview)
 // CMS.registerPreviewTemplate('about', AboutPagePreview)
 
-CMS.registerPreviewStyle("../style/all.css");
+CMS.registerPreviewStyle(styles.toString(), { raw: true });
 CMS.registerPreviewTemplate("blog", BlogPostPreview);
+
+CMS.init();
