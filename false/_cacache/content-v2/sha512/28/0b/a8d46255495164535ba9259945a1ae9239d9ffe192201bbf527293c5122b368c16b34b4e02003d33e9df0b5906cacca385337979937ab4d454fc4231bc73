@@ -1,0 +1,1 @@
+{"name":"is-newline","dist-tags":{"latest":"1.0.0"},"versions":{"1.0.0":{"name":"is-newline","version":"1.0.0","dependencies":{"newline-regex":"^0.2.0"},"devDependencies":{"ava":"*"},"dist":{"shasum":"f0aac97cc9ac0b4b94af8c55a01cf3690f436e38","tarball":"https://registry.npmjs.org/is-newline/-/is-newline-1.0.0.tgz"}}},"modified":"2015-10-30T18:27:50.189Z"}
