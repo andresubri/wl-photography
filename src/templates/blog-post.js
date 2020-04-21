@@ -7,6 +7,15 @@ import SEO from "../components/seo";
 
 class BlogPostTemplate extends React.Component {
   render() {
+    const props = {
+      title: "",
+      date: "MMMM DD, YYYY",
+      description: "",
+      thumbnail: {
+        childImageSharp: ""
+      }
+    };
+
     const post = this.props.post
       ? this.props.post
       : this.props.data.markdownRemark;

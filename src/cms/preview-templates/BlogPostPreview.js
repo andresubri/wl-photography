@@ -5,15 +5,19 @@ import BlogPostTemplate from "../../templates/blog-post";
 const BlogPostPreview = props => {
   const { entry, widgetFor } = props;
   console.log(props);
+
   const tags = entry.getIn(["data", "tags"]);
-  return (
-    <BlogPostTemplate
-      content={widgetFor("body")}
-      description={entry.getIn(["data", "description"])}
-      tags={tags && tags.toJS()}
-      title={entry.getIn(["data", "title"])}
-    />
-  );
+
+  const post = {
+    title: entry.getIn(["data", "title"]),
+    description: entry.getIn(["data", "description"]),
+    date: entry.getIn(["data", "date"]),
+    tags: tags && tags.toJS(),
+    thumbnail: entry.getIn(["data", "featuredimage"]),
+    html: widgetFor("body")
+  };
+
+  return <BlogPostTemplate post={post} />;
 };
 
 BlogPostPreview.propTypes = {
